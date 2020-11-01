@@ -1,9 +1,7 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function transform(arr) {
-  // throw new CustomError('Not implemented');
-
-  if (!Array.isArray(arr)) throw new CustomError('Not an array');
+  if (!Array.isArray(arr)) throw new Error('Not an array');
   tArr = [];
   for (let i = 0; i < arr.length; i++) {
     switch (arr[i]) {
